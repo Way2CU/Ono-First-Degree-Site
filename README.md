@@ -1,4 +1,4 @@
-# Ono-First-Degree-Site
+# Ono First Degree
 
 Landing page for Ono first degree marketing course.
 
