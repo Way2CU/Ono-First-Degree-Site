@@ -1,7 +1,116 @@
 /**
- * Content Style Sheet
- * Ono-First-Degree-Site
- *
- * Copyright (c) 2017. by Way2CU, http://way2cu.com
- * Authors: Vladimir Anusic
- */
+* Content Style Sheet
+* Ono-First-Degree-Site
+*
+* Copyright (c) 2017. by Way2CU, http://way2cu.com
+* Authors: Vladimir Anusic
+*/
+
+
+/**
+* Header fixed
+*/
+
+
+header.stock {
+	position: relative;
+	padding: 0.5rem calc(~'(100% - 1200px)' / 2);
+	background-color: white;
+	box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.2);
+}
+
+header.stock a.logo {
+	display: inline-block;
+ 	margin-top: 10px;
+}
+
+header.stock a.logo img {
+ 	width: 200px;
+ 	height: 100px;
+}
+
+header.stock nav {
+	position: absolute;
+	right: 25%;
+	top: 45px;
+
+	html[dir=rtl] & {
+		right: 45%;
+	}
+}
+
+header.stock nav a {
+	text-decoration: none;
+	color: @color_green;
+	padding: 0.5rem 1rem;
+	border: 2px solid @color_green;
+	display: inline-block;
+	transition: all 0.3s;
+
+	&:hover,
+	&:active {
+		color: white;
+		background-color: @color_green;
+
+		svg {
+			fill: white;
+		}
+	}
+}
+
+header.stock nav a.share {
+	margin-right: 4rem;
+
+	html[dir=rtl] & {
+		margin-left: 4rem;
+	}
+}
+
+header.stock nav a svg {
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	padding-right: 0.5em;
+	fill: @color_green;
+	transition: all 0.3s;
+
+	html[dir=rtl] & {
+		padding-left: 0.5em;
+	}
+}
+
+header.stock a.phone {
+	position: absolute;
+	right: 5%;
+	top: 45px;
+	padding: @button_padding;
+	color: @color_green;
+	text-decoration: none;
+	border: 2px solid @color_green;
+	transition: all 0.3s;
+
+	&:hover {
+		color: white;
+		background-color: @color_green;
+
+		svg {
+			fill: white;
+		}
+	}
+
+	html[dir=rtl] & {
+		right: 80%;
+	}
+}
+
+header.stock a.phone svg {
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	fill: @color_green;
+	padding-right: 0.5em;
+
+	html[dir=rtl] & {
+		padding-left: 0.5em;
+	}
+}
