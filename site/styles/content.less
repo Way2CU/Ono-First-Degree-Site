@@ -323,10 +323,10 @@ section#courses {
 	text-align: center;
 }
 
-section#courses h2 {
+section#courses h1 {
 	width: 80%;
 	margin: 0 auto;
-	margin-bottom: 3rem;
+	margin-bottom: 5rem;
 }
 
 section#courses ul {
@@ -348,4 +348,60 @@ section#courses ul li svg {
 	height: 70px;
 	display: block;
 	margin: 0 auto;
+}
+
+section#courses ul li p {
+	margin-top: 2rem;
+}
+
+/**
+*	Section statements
+*/
+
+section#statements {
+	padding: 2rem calc(~'(100% - 1200px)' / 2);
+	background-color: white;
+	color: @color_black;
+}
+
+section#statements ul {
+	margin: 0;
+	margin-left: 35%;
+	padding: 0;
+	list-style-type: none;
+	text-align: left;
+
+	html[dir=rtl] & {
+		margin-left: 0;
+		margin-right: 35%;
+		text-align: right;
+	}
+}
+
+section#statements ul li {
+	display: block;
+	padding: 1rem 0;
+	position: relative;
+}
+
+section#statements ul li svg {
+	width: 40px;
+	height: 40px;
+	fill: @color_green;
+	position: absolute;
+	top: 3%;
+	left: -10%;
+
+	html[dir=rtl] & {
+		right: -10%;
+		left: 0;
+	}
+}
+
+section#statements hr {
+	background-color: @color_green;
+	height: 1px;
+	border: 0px;
+	width: 80%;
+	margin-top: 3rem;
 }

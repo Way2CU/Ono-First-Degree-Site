@@ -46,7 +46,7 @@
 			</section>
 
 			<section id="courses">
-				<h2><cms:text constant="courses"/></h2>
+				<h1><cms:text constant="courses"/></h1>
 
 				<ul>
 					<cms:module
@@ -58,6 +58,20 @@
 						<param name="sprite" value="site_sprite.svg"/>
 					</cms:module>
 				</ul>
+			</section>
+
+			<section id="statements">
+				<ul>
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="statements"
+						template="stock/features_generic.xml"
+						>
+						<param name="sprite" value="site_sprite.svg"/>
+					</cms:module>
+				</ul>
+				<hr />
 			</section>
 		</body>
 	</html>
