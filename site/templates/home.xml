@@ -73,6 +73,23 @@
 				</ul>
 				<hr />
 			</section>
+
+			<section id="partners">
+				<div id="logos">
+					<h2><cms:text constant="partners_title" /></h2>
+
+					<!-- Desktop version -->
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="partners"
+						template="stock/image_generic.xml"
+						>
+						<param name="thumbnail_size" value="150"/>
+					</cms:module>
+				</div>
+				<hr />
+			</section>
 		</body>
 	</html>
 </document>
