@@ -20,6 +20,31 @@
 				<param name="phone_sprite_icon" value="icon-phone"/>
 				<param name="sprite" value="site_sprite.svg"/>
 			</cms:template>
+
+			<section id="header">
+				
+				<div id="header_article">
+					<cms:module
+						name="articles"
+						action="show"
+						text_id="header"
+						/>
+				</div>
+				<cms:svg file="ribbon.svg"/>
+				<!-- Animated arrow -->
+				<!-- <div id="arrow"> -->
+					<cms:svg file="site_sprite.svg" symbol="icon-arrow"/>
+				<!-- </div> -->
+
+				<div class="form_container">
+					<h2><cms:text constant="form_title"/></h2>
+					<cms:module
+						name="contact_form"
+						action="show"
+						text_id="form_header"
+						/>
+				</div>
+			</section>
 		</body>
 	</html>
 </document>
