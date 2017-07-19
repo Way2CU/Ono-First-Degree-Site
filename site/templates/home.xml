@@ -44,6 +44,21 @@
 						/>
 				</div>
 			</section>
+
+			<section id="courses">
+				<h2><cms:text constant="courses"/></h2>
+
+				<ul>
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="features"
+						template="stock/features_generic.xml"
+						>
+						<param name="sprite" value="site_sprite.svg"/>
+					</cms:module>
+				</ul>
+			</section>
 		</body>
 	</html>
 </document>
