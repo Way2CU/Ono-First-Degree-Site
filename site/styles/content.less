@@ -156,6 +156,16 @@ section#header svg {
 	}
 }
 
+@keyframes jumping_arrow {
+	from {
+		margin-top: -20px;
+	}
+
+	to {
+		margin-top: 0px;
+	}
+}
+
 section#header svg:last-of-type {
 	width: 50px;
 	height: 50px;
@@ -165,6 +175,13 @@ section#header svg:last-of-type {
 	border: 2px solid @color_green;
 	border-radius: 50%;
 	background-color: white;
+
+	animation-name: jumping_arrow;
+	animation-duration: 1s;
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+
 
 	html[dir=rtl] & {
 		margin: 0 auto;

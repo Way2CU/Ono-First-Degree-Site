@@ -31,10 +31,9 @@
 						/>
 				</div>
 				<cms:svg file="ribbon.svg"/>
+
 				<!-- Animated arrow -->
-				<!-- <div id="arrow"> -->
-					<cms:svg file="site_sprite.svg" symbol="icon-arrow"/>
-				<!-- </div> -->
+				<cms:svg file="site_sprite.svg" symbol="icon-arrow"/>
 
 				<div class="form_container">
 					<h2><cms:text constant="form_title"/></h2>
