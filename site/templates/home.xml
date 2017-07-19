@@ -78,7 +78,6 @@
 				<div id="logos">
 					<h2><cms:text constant="partners_title" /></h2>
 
-					<!-- Desktop version -->
 					<cms:module
 						name="gallery"
 						action="show_image_list"
