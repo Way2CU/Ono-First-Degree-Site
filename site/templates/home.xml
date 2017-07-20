@@ -118,6 +118,22 @@
 						/>
 				</div>
 			</section>
+
+			<section id="studies">
+				<h2><cms:text constant="studies_title1"/></h2>
+				<h2><cms:text constant="studies_title2"/></h2>
+
+				<ul>
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="studies"
+						template="parts/article_item.xml"
+						>
+					<param name="thumbnail_size" value="250"/>
+					</cms:module>
+				</ul>		
+			</section>
 		</body>
 	</html>
 </document>

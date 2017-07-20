@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<li class="stock feature">
+		
+		<!-- Article text -->
+		<div class="description">
+			<cms:markdown param="content" multilanguage="yes"/>
+		</div>
+
+		<!-- Accompanying image -->
+		<img
+			src="gallery::getThumbnailById(null,$params['text_id'],$template['thumbnail_size'])"
+			alt="$params['title'][$language]"
+			cms:eval="src,alt"
+			/>
+	</li>
+</document>

@@ -486,3 +486,63 @@ section#video {
 section#video div.youtube {
 	margin-top: 4rem;
 }
+
+/**
+*	Section opportunities
+*/
+
+section#studies {
+	padding: 2rem calc(~'(100% - 1200px)' / 2);
+	background-color: white;
+	color: @color_black;
+	text-align: center;
+}
+
+section#studies h2 {
+
+	&:first-of-type {
+		margin-top: 3rem;
+	}
+
+	&:last-of-type {
+		margin-bottom: 5rem;
+	}
+}
+
+section#studies ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+section#studies ul li {
+	display: inline-block;
+
+	.elements-in-row(2, 2rem);
+
+	box-shadow: 3px 1px 10px rgba(0, 0, 0, 0.3);
+	height: 292px;
+	margin-bottom: 2rem;
+}
+
+section#studies ul li div.description {
+	display: inline-block;
+	width: 50%;
+	text-align: left;
+	vertical-align: top;
+
+	html[dir=rtl] & {
+		text-align: right;
+	}
+}
+
+section#studies ul li div.description h3,
+section#studies ul li div.description p {
+	margin: 0;
+	padding: 0.3rem 1rem;
+}
+
+section#studies ul li img {
+	display: inline-block;
+	width: 50%;
+}
