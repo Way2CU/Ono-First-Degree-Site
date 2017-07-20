@@ -453,8 +453,9 @@ section#graduates {
 
 section#graduates figure {
 	display: inline-block;
-	// max-width: 20%;
+
 	.elements-in-row(4, 1rem);
+
 	overflow: hidden;
 	vertical-align: top;
 }
@@ -469,4 +470,19 @@ section#graduates figure img {
 
 section#graduates h2 {
 	margin-bottom: 4rem;
+}
+
+/**
+*	Section video
+*/
+
+section#video {
+	padding: 2rem calc(~'(100% - 1200px)' / 2);
+	color: white;
+	text-align: center;
+	background-color: @color_black;
+}
+
+section#video div.youtube {
+	margin-top: 4rem;
 }

@@ -103,6 +103,21 @@
 						<param name="constrain" value="Thumbnail::CONSTRAIN_BOTH"/>
 					</cms:module>
 			</section>
+
+			<section id="video">
+				<h2><cms:text constant="video_title"/></h2>
+
+				<div class="youtube">
+					<cms:module
+						name="youtube"
+						action="show"
+						text_id="degree_video"
+						embed="1"
+						width="500"
+						height="312"
+						/>
+				</div>
+			</section>
 		</body>
 	</html>
 </document>
