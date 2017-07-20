@@ -9,7 +9,7 @@
 
 		<body>
 			<!-- Embed site sprite -->
-			<cms:svg file="site-sprite.svg"/>
+			<cms:svg file="site_sprite.svg"/>
 
 			<!-- Fixed header -->
 			<cms:template file="stock/header_generic.xml">
@@ -88,6 +88,20 @@
 					</cms:module>
 				</div>
 				<hr />
+			</section>
+
+			<section id="graduates">
+				<h2><cms:text constant="graduates_title"/></h2>
+				<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="graduates"
+						template="parts/gallery_image_template.xml"
+						>
+						<param name="thumbnail_size" value="200"/>
+						<param name="description" value=""/>
+						<param name="constrain" value="Thumbnail::CONSTRAIN_BOTH"/>
+					</cms:module>
 			</section>
 		</body>
 	</html>

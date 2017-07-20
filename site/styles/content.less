@@ -439,3 +439,34 @@ section#partners hr {
 	width: 80%;
 	margin-top: 5rem;
 }
+
+/**
+* Section graduates
+*/
+
+section#graduates {
+	padding: 2rem calc(~'(100% - 1200px)' / 2);
+	background-color: white;
+	color: @color_black;
+	text-align: center;
+}
+
+section#graduates figure {
+	display: inline-block;
+	// max-width: 20%;
+	.elements-in-row(4, 1rem);
+	overflow: hidden;
+	vertical-align: top;
+}
+
+section#graduates figure figcaption {
+	margin-top: 1rem;
+}
+
+section#graduates figure img {
+	border: 1px solid @color_black;
+}
+
+section#graduates h2 {
+	margin-bottom: 4rem;
+}
