@@ -3,11 +3,14 @@
 	"form_link": "Register",
 	"share_link": "Share",
 	"phone": "09-7654321",
-	"form_title": " Header form title",
+	"form_title": "Form title",
 	"courses": "Available courses",
 	"partners_title": "Market leading and branded advertising offices with practical and collaborative action",
 	"graduates_title": "Our graduates did what ?",
 	"video_title": "Title for section with Youtube video",
 	"studies_title1": "The title that gives the most varied and varied courses in advertising and marketing communications in Israel",
-	"studies_title2": "Degree studies include all courses!"
+	"studies_title2": "Degree studies include all courses!",
+	"footer_form_msg": "Some message in footer form.",
+	"copyright_holder": "Copyright &copy;2017. by <a href=\"http://way2cu.com\" target=\"_blank\">Way2CU</a>.",
+    "copyright_rights": "All rights reserved."
 }

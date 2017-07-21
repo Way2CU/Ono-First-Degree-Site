@@ -40,7 +40,7 @@
 					<cms:module
 						name="contact_form"
 						action="show"
-						text_id="form_header"
+						text_id="contact_form"
 						/>
 				</div>
 			</section>
@@ -130,10 +130,39 @@
 						group="studies"
 						template="parts/article_item.xml"
 						>
-					<param name="thumbnail_size" value="250"/>
+						<param name="thumbnail_size" value="250"/>
 					</cms:module>
 				</ul>		
 			</section>
+
+			<footer>
+				<div id="footer_article">
+					<cms:module
+						name="articles"
+						action="show"
+						text_id="footer"
+						/>
+				</div>
+
+				<cms:svg file="ribbon.svg"/>
+
+				<div class="form_container">
+					<h2><cms:text constant="form_title"/></h2>
+					<cms:module
+						name="contact_form"
+						action="show"
+						text_id="contact_form"
+						/>
+					<p><cms:text constant="footer_form_msg"/></p>
+				</div>
+			</footer>
+
+			<!-- Copyright -->
+			<cms:template file="stock/copyright.xml">
+				<param name="light" value=""/>
+				<param name="holder" value="copyright_holder"/>
+				<param name="text" value="copyright_rights"/>
+			</cms:template>
 		</body>
 	</html>
 </document>

@@ -45,6 +45,7 @@ header.stock nav a {
 	padding: 0.5rem 1rem;
 	border: 2px solid @color_green;
 	display: inline-block;
+	cursor: pointer;
 	transition: all 0.3s;
 
 	&:hover,
@@ -87,6 +88,7 @@ header.stock a.phone {
 	color: @color_green;
 	text-decoration: none;
 	border: 2px solid @color_green;
+	cursor: pointer;
 	transition: all 0.3s;
 
 	&:hover {
@@ -140,7 +142,7 @@ div#header_article {
 	background-color: white;
 }
 
-div#header_article p em {
+div#header_article h1 em {
 	color: @color_green;
 }
 
@@ -453,6 +455,7 @@ section#graduates {
 
 section#graduates figure {
 	display: inline-block;
+	margin-left: 0;
 
 	.elements-in-row(4, 1rem);
 
@@ -545,4 +548,76 @@ section#studies ul li div.description p {
 section#studies ul li img {
 	display: inline-block;
 	width: 50%;
+}
+
+/**
+*	Footer
+*/
+
+footer {
+	padding: 2rem calc(~'(100% - 1200px)' / 2);
+	position: relative;
+	color: white;
+
+	background-image: url(../images/footer.jpg);
+	background-size: 1920px 850px;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	min-height: 600px;
+}
+
+div#footer_article {
+	display: block;
+	text-align: center;
+	width: 40%;
+	margin: 0 auto;
+	padding: 3rem 3rem;
+}
+
+div#footer_article article h3 {
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 4rem;
+}
+
+div#footer_article article h2 {
+	width: 85%;
+	display: block;
+	margin: 0 auto;
+}
+
+footer svg {
+	width: 250px;
+	height: 250px;
+	position: absolute;
+	top: 1%;
+	right: 20%;
+
+
+	html[dir=rtl] & {
+		right: 65%;
+	}
+}
+
+footer div.form_container {
+	height: 240px;
+}
+
+div.form_container p {
+	display: block;
+	margin-top: 5rem;
+}
+
+
+/**
+*	Copyright
+*/
+
+div.copyright {
+	text-align: center;
+	background-color: black;
+	color: white;
+
+	background-position: calc(~'50% - 100px') center
 }
