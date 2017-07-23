@@ -1,13 +1,19 @@
 <document>
 	<!-- Share link -->
-	<a class="share" href="URL::make()" cms:eval="href">
+	<a class="share mobile_title" href="URL::make()" cms:eval="href">
 		<cms:svg file="site_sprite.svg" symbol="icon-share"/>
-		<cms:text constant="share_link"/>
+
+		<cms:desktop>
+			<cms:text constant="share_link"/>
+		</cms:desktop>
 	</a>
 	
 	<!-- Form link -->
-	<a class="form" href="URL::make()" cms:eval="href">
+	<a class="form mobile_title" href="URL::make()" cms:eval="href">
 		<cms:svg file="site_sprite.svg" symbol="icon-form"/>
-		<cms:text constant="form_link"/>
+
+		<cms:desktop>
+			<cms:text constant="form_link"/>
+		</cms:desktop>
 	</a>
 </document>

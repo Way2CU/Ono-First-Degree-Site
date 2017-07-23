@@ -13,7 +13,6 @@
 
 
 header.stock {
-	position: relative;
 	padding: 0.5rem calc(~'(100% - 1200px)' / 2);
 	background-color: white;
 	box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.2);
@@ -142,8 +141,14 @@ div#header_article {
 	background-color: white;
 }
 
-div#header_article h1 em {
+div#header_article article h1 em {
+	font-weight: 400;
+	font-style: normal;
+}
+
+div#header_article article h3 em {
 	color: @color_green;
+	font-style: normal;
 }
 
 section#header svg {
@@ -160,11 +165,11 @@ section#header svg {
 
 @keyframes jumping_arrow {
 	from {
-		margin-top: -20px;
+		transform: translateY(-20px);
 	}
 
 	to {
-		margin-top: 0px;
+		transform: translateY(20px);
 	}
 }
 
@@ -227,15 +232,23 @@ div.form_container form label.checkbox {
 	& input[type="checkbox"] {
 		cursor: pointer;
 	}
+
+	& span {
+		width: 80%;
+	}
 }
 
 div.form_container form label:nth-of-type(5) {
 	left: 12%;
-	width: 45%;
+	width: 52%;
 
 	& input {
 		width: 20px;
 		transform: scale(1.5);
+	}
+
+	& span {
+		width: 90%;
 	}
 
 	html[dir=rtl] & {
@@ -247,7 +260,7 @@ div.form_container form label:nth-of-type(5) {
 
 div.form_container form label:nth-of-type(6) {
 	right: 22%;
-	width: 20%;
+	width: 12%;
 
 	& input {
 		width: 20px;
@@ -256,7 +269,7 @@ div.form_container form label:nth-of-type(6) {
 
 	html[dir=rtl] & {
 		text-align: right;
-		right: 60%;
+		right: 66%;
 	}
 }
 
@@ -294,7 +307,7 @@ div.form_container form label span {
 	display: inline-block;
 	vertical-align: middle;
 	width: 15%;
-	padding: 0 2.5%;
+	padding: 0 0.4rem;
 }
 
 div.form_container form div.controls button {
@@ -592,7 +605,7 @@ footer svg {
 	height: 250px;
 	position: absolute;
 	top: 1%;
-	right: 20%;
+	right: 18%;
 
 
 	html[dir=rtl] & {
