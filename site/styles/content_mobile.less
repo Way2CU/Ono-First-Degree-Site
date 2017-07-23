@@ -297,6 +297,57 @@ section#courses ul li svg {
 }
 
 /**
+*	Section statements
+*/
+
+section#statements {
+	color: @color_black;
+}
+
+section#statements ul {
+	margin: 0;
+	padding: 1rem 1rem;
+	list-style-type: none;
+}
+
+section#statements ul li {
+	display: block;
+	padding-bottom: 2rem;
+	margin: 0 auto;
+
+	&:last-child {
+		padding-bottom: 0;
+	}
+}
+
+section#statements ul li svg {
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	vertical-align: middle;
+	padding-right: 1rem;
+	fill: @color_green;
+
+	html[dir=rtl] & {
+		padding-right: 0;
+		padding-left: 1rem;
+	}
+}
+
+section#statements ul li p {
+	display: inline-block;
+	vertical-align: top;
+	width: 80%;
+}
+
+section#statements hr {
+	background-color: @color_green;
+	height: 1px;
+	border: 0px;
+	width: 90%;
+}
+
+/**
 *	Section video
 */
 
