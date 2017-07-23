@@ -152,6 +152,11 @@
 						/>
 				</div>
 
+				<cms:mobile>
+					<!-- Animated arrow -->
+					<cms:svg file="site_sprite.svg" symbol="icon-arrow"/>
+				</cms:mobile>
+
 				<cms:svg file="ribbon.svg"/>
 
 				<div class="form_container">
@@ -161,7 +166,10 @@
 						action="show"
 						text_id="contact_form"
 						/>
-					<p><cms:text constant="footer_form_msg"/></p>
+						
+					<cms:desktop>
+						<p><cms:text constant="footer_form_msg"/></p>
+					</cms:desktop>
 				</div>
 			</footer>
 
