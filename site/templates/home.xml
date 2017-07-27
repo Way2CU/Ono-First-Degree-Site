@@ -179,6 +179,14 @@
 				<param name="holder" value="copyright_holder"/>
 				<param name="text" value="copyright_rights"/>
 			</cms:template>
+
+			<div id="contact_dialog">
+				<cms:module
+					name="contact_form"
+					action="show"
+					text_id="contact_form"
+					/>
+			</div>
 		</body>
 	</html>
 </document>

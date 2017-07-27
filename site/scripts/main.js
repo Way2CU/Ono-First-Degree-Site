@@ -45,12 +45,30 @@ Site.is_mobile = function() {
 	return result;
 };
 
+handle_dialog_form = function(event) {
+	event.preventDefault();
+	Site.dialog_form.open();
+
+}
+
 /**
  * Function called when document and images have been completely loaded.
  */
 Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
+
+	// dialog which contains form
+	Site.dialog_form = new Caracal.Dialog();
+	Site.dialog_form
+		.set_content_from_dom('div#contact_dialog')
+		.add_class('dialog_form')
+		.set_title(language_handler.getText(null, 'form_title'));
+
+	if (!Site.is_mobile()) {
+		Site.show_dialog_button = document.querySelector('a.form');
+		Site.show_dialog_button.addEventListener('click', handle_dialog_form);
+	}
 };
 
 
