@@ -20,7 +20,6 @@
 				<param name="phone_sprite_icon" value="icon-phone"/>
 				<param name="sprite" value="site_sprite.svg"/>
 			</cms:template>
-
 			<section id="header">
 				
 				<div id="header_article">
