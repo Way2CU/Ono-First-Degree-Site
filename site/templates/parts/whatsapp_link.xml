@@ -1,0 +1,9 @@
+<document>
+	<a 
+		class="share mobile_title" 
+		href="'whatsapp://send?text='.urlencode($params['description'][$language])" 
+		cms:eval="href"
+		>
+		<cms:svg file="site_sprite.svg" symbol="icon-share"/>
+	</a>
+</document>
