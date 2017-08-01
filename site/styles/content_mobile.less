@@ -54,6 +54,8 @@ header.stock a.phone svg {
 a {
 	&.share {
 		transform: translate(10rem, 1rem);
+		width: 35px;
+		height: 35px;
 
 		html[dir=rtl] & {
 			transform: translate(-10rem, 1rem);
@@ -62,6 +64,8 @@ a {
 
 	&.form {
 		transform: translate(13.5rem, 1rem);
+		width: 35px;
+		height: 35px;
 
 		html[dir=rtl] & {
 			transform: translate(-13.5rem, 1rem);
@@ -77,10 +81,6 @@ a {
 		}
 	}
 	
-}
-
-div.mobile_menu {
-	z-index: 10000003;
 }
 
 /**
@@ -159,8 +159,6 @@ div.form_container {
 	width: 100%;
 	box-sizing: border-box;
 	padding: 1em;
-	min-height: 500px;
-	position: relative;
 
 	h2 {
 		color: white;
@@ -215,9 +213,10 @@ div.form_container form div.controls button {
 }
 
 div.form_container form label.checkbox {
-	position: absolute;
 	text-align: left;
-	width: 95%;
+	box-sizing: border-box;
+	display: block;
+	padding-bottom: 1rem;
 
 	& input {
 		width: 13px;
@@ -237,34 +236,6 @@ div.form_container form label.checkbox {
 		width: 85%;
 		vertical-align: top;
 	}
-}
-
-div.form_container form label:nth-of-type(5) {
-	bottom: 1rem;
-
-	html[dir=rtl] & {
-		text-align: right;
-	}
-}
-
-div.form_container form label:nth-of-type(6) {
-	bottom: 5.5rem;
-
-	html[dir=rtl] & {
-		text-align: right;
-	}
-}
-
-div.form_container form label:nth-of-type(7) {
-	bottom: 8.5rem;
-
-	html[dir=rtl] & {
-		text-align: right;
-	}
-}
-
-div.form_container form {
-	position: static;
 }
 
 /**
@@ -595,4 +566,119 @@ div.copyright {
 	margin-top: -1px;
 
 	background-position: calc(~'50% - 100px') center
+}
+
+/**
+*	Dialog Form
+*/
+
+div#contact_dialog {
+	background-color: fade(@color_black, 80%);
+}
+
+div#contact_dialog form {
+	margin: 0 auto;
+	color: white;
+	padding: 1rem;
+}
+
+div#contact_dialog form div.controls,
+div#contact_dialog form label {
+	display: block;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+div#contact_dialog form label input {
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 0.7em 1em;
+	width: 80%;
+	border: 1px solid grey;
+	margin-bottom: 1em;
+
+	&:hover,
+	&:active {
+		border: 1px solid @color_green;
+	}
+
+}
+
+div#contact_dialog form label span {
+	display: inline-block;
+	width: 20%;
+	text-align: left;
+
+	html[dir=rtl] & {
+		text-align: right;
+	}
+}
+
+div#contact_dialog form div.controls button {
+	height: 45px;
+	padding: 0 3em;
+	border: transparent;
+	background-color: @color_green;
+	color: white;
+
+	&:hover,
+	&:active {
+		background-color: darken(@color_green, 10%);
+	}
+}
+
+div#contact_dialog form label.checkbox {
+	text-align: left;
+	box-sizing: border-box;
+	display: block;
+	padding-bottom: 1rem;
+
+	& input {
+		width: 13px;
+		margin-right: 0.5rem;
+
+		&:checked,
+		&:hover {
+			box-shadow: 0px 1px 2px 2px @color_green;
+			transition: all 0.3s;
+		}
+
+		html[dir=rtl] & {
+			margin: 1px 1px 1px 0.5rem;
+			text-align: right;
+		}
+	}
+
+	& span {
+		width: 85%;
+		vertical-align: top;
+	}
+}
+
+div.dialog_form {
+	margin-top: 5.5rem;
+	width: 300px;
+
+	& button.submit {
+		display: none;
+	}
+}
+
+div.dialog.error {
+	margin-top: 5.5rem;
+}
+
+div.command_bar button {
+	display: inline-block;
+	padding: 0.6rem 0.8rem;
+	margin-left: 2rem;
+	background-color: @color_green;
+	color: white;
+	border: transparent;
+	transition: all 0.3s;
+
+	html[dir=rtl] & {
+		margin-left: 0;
+		margin-right: 2rem;
+	}
 }

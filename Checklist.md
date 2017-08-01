@@ -6,7 +6,7 @@ All of these need to be checked manually, changed and then committed. System wil
 	> - [x] PNG images are optimized using `optipng` command;
 	- [x] JPEG images are converted from original PNG and optimized using `guetzli` command;
 	- [x] SVG images are cleaned and optimized;
-	- [ ] Make sure site scores 95+ on Page Speed Insights (ideally 100);
+	- [x] Make sure site scores 95+ on Page Speed Insights (ideally 100);
 - Site specific items:
 	- [x] `system_init.xml` file contains all the modules used;
 	- [x] Deployment script `group_vars/all` file is configured;
@@ -15,7 +15,7 @@ All of these need to be checked manually, changed and then committed. System wil
 	- [x] Site title is properly defined;
 	- [x] No errors or warnings are reported in the log file;
 	> - [x] Templates for registering and recovering user password are created and selected;
-	- [ ] Site has favicon specified in different sizes (16, 32, 64);
+	- [x] Site has favicon specified in different sizes (16, 32, 64);
 	- [x] All active elements of the site have `:hover` and `:focus` styles defined;
 	- [x] Site has copyright;
 	- [x] `README.md` file updated appropriately with licensing information;
@@ -28,8 +28,8 @@ All of these need to be checked manually, changed and then committed. System wil
 	- [ ] Default sender email;
 	- [ ] Default recipient;
 	- [x] Forms have honeypot field;
-	- [ ] Templates for each form are created and assigned to form;
-	- [ ] Templates have subject properly defined;
+	- [x] Templates for each form are created and assigned to form;
+	- [x] Templates have subject properly defined;
 	- [ ] Form submits and client/developer receives email.
 - Shop:
 	> - [x] Desired payment method is enabled and configured;

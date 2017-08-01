@@ -45,30 +45,43 @@ Site.is_mobile = function() {
 	return result;
 };
 
-handle_dialog_form = function(event) {
+Site.handle_dialog_form = function(event) {
 	event.preventDefault();
 	Site.dialog_form.open();
 
+};
+
+Site.handle_form_submit = function(event) {
+	event.preventDefault();
+	Caracal.ContactForm.list[0]._form.submit();
 }
 
 /**
  * Function called when document and images have been completely loaded.
  */
 Site.on_load = function() {
-	if (Site.is_mobile())
+	if (Site.is_mobile()) 
 		Site.mobile_menu = new Caracal.MobileMenu();
+
+	// This button replaceses submit button from default form
+	Site.submit_button = document.querySelector('#submit');
+	Site.submit_button.innerHTML = language_handler.getText(null, 'submit');
 
 	// dialog which contains form
 	Site.dialog_form = new Caracal.Dialog();
 	Site.dialog_form
 		.set_content_from_dom('div#contact_dialog')
 		.add_class('dialog_form')
+		.add_control(Site.submit_button)
 		.set_title(language_handler.getText(null, 'form_title'));
 
-	if (!Site.is_mobile()) {
-		Site.show_dialog_button = document.querySelector('a.form');
-		Site.show_dialog_button.addEventListener('click', handle_dialog_form);
-	}
+	// Open Form in Dialog
+	Site.show_dialog_button = document.querySelector('a.form');
+	Site.show_dialog_button.addEventListener('click', Site.handle_dialog_form);
+
+	// Handle form submit with new Submit button in dilaog form
+	Site.submit_button.addEventListener('click', Site.handle_form_submit);
+	
 };
 
 

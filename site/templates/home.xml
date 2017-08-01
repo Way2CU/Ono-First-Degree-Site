@@ -18,9 +18,9 @@
 				<param name="logo" value="logo.svg"/>
 				<param name="phone" value="phone"/>
 				<param name="phone_sprite_icon" value="icon-phone"/>
+				<param name="inline_menu" value=""/> 
 				<param name="sprite" value="site_sprite.svg"/>
 			</cms:template>
-
 			<section id="header">
 				
 				<div id="header_article">
@@ -186,6 +186,7 @@
 					action="show"
 					text_id="contact_form"
 					/>
+				<button type="submit" id="submit"></button>
 			</div>
 		</body>
 	</html>

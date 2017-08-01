@@ -28,17 +28,24 @@ header.stock a.logo img {
  	height: 100px;
 }
 
-header.stock nav {
+header.stock nav#main {
 	position: absolute;
 	right: 25%;
 	top: 45px;
 
 	html[dir=rtl] & {
-		right: 45%;
+		right: 60%;
 	}
 }
 
-header.stock nav a {
+header.stock a.phone {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+
+header.stock a.phone,
+header.stock a.form {
 	text-decoration: none;
 	color: @color_green;
 	padding: 0.5rem 1rem;
@@ -58,12 +65,8 @@ header.stock nav a {
 	}
 }
 
-header.stock nav a.share {
-	margin-right: 4rem;
-
-	html[dir=rtl] & {
-		margin-left: 4rem;
-	}
+header.stock a.share {
+	display: none;
 }
 
 header.stock nav a svg {
@@ -309,7 +312,7 @@ div.form_container form label input {
 
 	&:hover,
 	&:focus {
-		border: 2px solid @color_green;
+		border: 1px solid @color_green;
 	}
 }
 
