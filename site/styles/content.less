@@ -13,25 +13,23 @@
 
 
 header.stock {
-	padding: 0.5rem calc(~'(100% - 1200px)' / 2);
+	padding: 0.2rem calc(~'(100% - 1200px)' / 2);
 	background-color: white;
 	box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.2);
 }
 
 header.stock a.logo {
 	display: inline-block;
- 	margin-top: 10px;
 }
 
 header.stock a.logo img {
- 	width: 200px;
- 	height: 100px;
+ 	height: 5rem;
 }
 
 header.stock nav#main {
 	position: absolute;
 	right: 25%;
-	top: 45px;
+	top: 23px;
 
 	html[dir=rtl] & {
 		right: 60%;
@@ -85,7 +83,7 @@ header.stock nav a svg {
 header.stock a.phone {
 	position: absolute;
 	right: 5%;
-	top: 45px;
+	top: 20px;
 	padding: @button_padding;
 	color: @color_green;
 	text-decoration: none;
@@ -787,4 +785,8 @@ div#contact_dialog form label:nth-of-type(7) {
 
 div#contact_dialog form {
 	position: static;
+}
+
+div.dialog_form div.command_bar button#submit {
+	display: none;
 }
