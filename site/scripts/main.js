@@ -81,6 +81,10 @@ Site.on_load = function() {
 
 	// Handle form submit with new Submit button in dilaog form
 	Site.submit_button.addEventListener('click', Site.handle_form_submit);
+	
+	// Lightbox for partners images 
+	Site.lightbox = new LightBox('section#partners a.image', true, false, true);
+	
 };
 
 
