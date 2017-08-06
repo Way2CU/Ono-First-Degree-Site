@@ -54,7 +54,7 @@ Site.handle_dialog_form = function(event) {
 Site.handle_form_submit = function(event) {
 	event.preventDefault();
 	Caracal.ContactForm.list[0]._form.submit();
-}
+};
 
 /**
  * Function called when document and images have been completely loaded.
@@ -63,7 +63,7 @@ Site.on_load = function() {
 	if (Site.is_mobile()) 
 		Site.mobile_menu = new Caracal.MobileMenu();
 
-	// This button replaceses submit button from default form
+	// This button replaceses standard submit button in dialog form
 	Site.submit_button = document.querySelector('#submit');
 	Site.submit_button.innerHTML = language_handler.getText(null, 'submit');
 
@@ -81,7 +81,6 @@ Site.on_load = function() {
 
 	// Handle form submit with new Submit button in dilaog form
 	Site.submit_button.addEventListener('click', Site.handle_form_submit);
-	
 };
 
 
