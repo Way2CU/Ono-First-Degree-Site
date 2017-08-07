@@ -125,7 +125,7 @@ header.stock a.phone svg {
 */
 
 section#header {
-	padding: 2rem calc(~'(100% - 1200px)' / 2);
+	padding: @section_spacing calc(~'(100% - 1200px)' / 2);
 	position: relative;
 
 	background-image: url(../images/header.jpg);
@@ -345,7 +345,7 @@ div.form_container form div.controls button {
 */
 
 section#courses {
-	padding: 2rem calc(~'(100% - 1200px)' / 2);
+	padding: @section_spacing calc(~'(100% - 1200px)' / 2);
 	background-color: @color_black;
 	color: white;
 	text-align: center;
@@ -354,7 +354,6 @@ section#courses {
 section#courses h1 {
 	width: 80%;
 	margin: 0 auto;
-	margin-bottom: 5rem;
 }
 
 section#courses ul {
@@ -387,7 +386,7 @@ section#courses ul li p {
 */
 
 section#statements {
-	padding: 2rem calc(~'(100% - 1200px)' / 2);
+	padding: @section_spacing calc(~'(100% - 1200px)' / 2);
 	background-color: white;
 	color: @color_black;
 }
@@ -408,7 +407,7 @@ section#statements ul {
 
 section#statements ul li {
 	display: block;
-	padding: 1rem 0;
+	padding: 0.5rem 0;
 	position: relative;
 }
 
@@ -439,17 +438,13 @@ section#statements hr {
 */
 
 section#partners {
-	padding: 2rem calc(~'(100% - 1200px)' / 2);
+	padding: @section_spacing calc(~'(100% - 1200px)' / 2);
 	background-color: white;
 	color: @color_black;
 }
 
 div#logos {
 	text-align: center;
-}
-
-div#logos h2 {
-	margin-bottom: 5rem;
 }
 
 div#logos a img {
@@ -474,7 +469,7 @@ section#partners hr {
 */
 
 section#graduates {
-	padding: 2rem calc(~'(100% - 1200px)' / 2);
+	padding: @section_spacing calc(~'(100% - 1200px)' / 2);
 	background-color: white;
 	color: @color_black;
 	text-align: center;
@@ -482,39 +477,49 @@ section#graduates {
 
 section#graduates figure {
 	display: inline-block;
-	margin-left: 0;
+	width: 23%;
+	min-height: 340px;
 
-	.elements-in-row(4, 1rem);
+	&:last-of-type,
+	html[dir=rtl] &:last-of-type {
+		margin: 1rem 0;
+	}
+
+	&:not(:last-of-type) {
+		margin-right: 1rem;	
+	}
+
+	html[dir=rtl] &:not(:last-of-type) {
+		margin-right: 0;
+		margin-left: 1rem;
+	}
 
 	overflow: hidden;
-	vertical-align: top;
-}
-
-section#graduates figure div {
-	height: 205px;
-  	white-space: nowrap;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
 
   	&:before {
 		display: inline-block;
 		width: 0;
-		height: 100%;
+		height: 240px;
 		vertical-align: middle;
 		content: '';
 	}
 }
 
+section#graduates figure figcaption p {
+	width: 90%;
+	margin: 0 auto;
+	padding-bottom: 0.5rem;
+}
+
 section#graduates figure figcaption {
-	margin-top: 1rem;
+	display: block;
 }
 
 section#graduates figure img {
-	border: 1px solid @color_black;
 	display: inline-block;
     vertical-align: middle;
-}
-
-section#graduates h2 {
-	margin-bottom: 4rem;
+    padding: 1rem;
 }
 
 /**
@@ -522,14 +527,10 @@ section#graduates h2 {
 */
 
 section#video {
-	padding: 2rem calc(~'(100% - 1200px)' / 2);
+	padding: @section_spacing calc(~'(100% - 1200px)' / 2);
 	color: white;
 	text-align: center;
 	background-color: @color_black;
-}
-
-section#video div.youtube {
-	margin-top: 4rem;
 }
 
 /**
@@ -537,21 +538,10 @@ section#video div.youtube {
 */
 
 section#studies {
-	padding: 2rem calc(~'(100% - 1200px)' / 2);
+	padding: @section_spacing calc(~'(100% - 1200px)' / 2);
 	background-color: white;
 	color: @color_black;
 	text-align: center;
-}
-
-section#studies h2 {
-
-	&:first-of-type {
-		margin-top: 3rem;
-	}
-
-	&:last-of-type {
-		margin-bottom: 5rem;
-	}
 }
 
 section#studies ul {
@@ -597,7 +587,7 @@ section#studies ul li img {
 */
 
 footer {
-	padding: 2rem calc(~'(100% - 1200px)' / 2);
+	padding: @section_spacing calc(~'(100% - 1200px)' / 2);
 	position: relative;
 	color: white;
 
@@ -643,12 +633,12 @@ footer svg {
 	width: 250px;
 	height: 250px;
 	position: absolute;
-	top: 1%;
-	right: 18%;
+	top: 7%;
+	right: 19%;
 
 
 	html[dir=rtl] & {
-		right: 65%;
+		right: 63%;
 	}
 }
 

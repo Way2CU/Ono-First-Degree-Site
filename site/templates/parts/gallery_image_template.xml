@@ -1,12 +1,10 @@
 <document>
 	<figure>
-		<div>
-			<img
-				src="gallery::getThumbnailById($params['id'], null, $template['thumbnail_size'], isset($template['constrain']) ? constant($template['constrain']) : Thumbnail::CONSTRAIN_BOTH)"
-				alt="$params['title'][$language]"
-				cms:eval="src,alt"
-				/>
-		</div>
+		<img
+			src="gallery::getThumbnailById($params['id'], null, $template['thumbnail_size'], isset($template['constrain']) ? constant($template['constrain']) : Thumbnail::CONSTRAIN_BOTH)"
+			alt="$params['title'][$language]"
+			cms:eval="src,alt"
+			/>
 		<!-- Title -->
 		<cms:if condition="isset($template['title'])">
 			<h4><cms:var param="title" multilanguage="yes"/></h4>
