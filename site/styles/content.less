@@ -670,7 +670,7 @@ div.copyright {
 */
 
 div#contact_dialog {
-	width: 400px;
+	width: 100%;
 	height: 400px;
 	background-color: fade(@color_black, 80%);
 }
@@ -705,7 +705,7 @@ div#contact_dialog form label input {
 
 div#contact_dialog form label span {
 	display: inline-block;
-	width: 20%;
+	width: 12%;
 	text-align: left;
 
 	html[dir=rtl] & {
@@ -719,6 +719,7 @@ div#contact_dialog form div.controls button {
 	border: transparent;
 	background-color: @color_green;
 	color: white;
+	margin-top: 1rem;
 
 	&:hover,
 	&:active {
@@ -727,9 +728,13 @@ div#contact_dialog form div.controls button {
 }
 
 div#contact_dialog form label.checkbox {
-	position: absolute;
 	text-align: left;
-	width: 95%;
+	width: 75%;
+	margin-left: 1.5rem;
+
+	html[dir=rtl] & {
+		margin-right: 1.5rem;	
+	}
 
 	& input {
 		width: 13px;
@@ -753,7 +758,6 @@ div#contact_dialog form label.checkbox {
 }
 
 div#contact_dialog form label:nth-of-type(5) {
-	bottom: 4rem;
 
 	html[dir=rtl] & {
 		text-align: right;
@@ -761,7 +765,6 @@ div#contact_dialog form label:nth-of-type(5) {
 }
 
 div#contact_dialog form label:nth-of-type(6) {
-	bottom: 9rem;
 
 	html[dir=rtl] & {
 		text-align: right;
@@ -769,15 +772,10 @@ div#contact_dialog form label:nth-of-type(6) {
 }
 
 div#contact_dialog form label:nth-of-type(7) {
-	bottom: 11rem;
 
 	html[dir=rtl] & {
 		text-align: right;
 	}
-}
-
-div#contact_dialog form {
-	position: static;
 }
 
 div.dialog_form div.command_bar button#submit {
