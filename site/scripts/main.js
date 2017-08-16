@@ -89,6 +89,7 @@ Site.on_load = function() {
 	Site.submit_button = document.createElement('a');
 	Site.submit_button.innerHTML = language_handler.getText(null, 'submit');
 	Site.submit_button.addEventListener('click', Site.handle_submit_click);
+	Site.submit_button.href = 'javascript: void(0);';
 
 	// dialog which contains form
 	Site.dialog_form = new Caracal.Dialog();
