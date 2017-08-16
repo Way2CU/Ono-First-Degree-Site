@@ -68,7 +68,7 @@ Site.handle_submit_click = function(event) {
  * @param object response_data
  */
 Site.handle_submit_success = function(data) {
-	if (!data.error)
+	if (data.error)
 		return;
 
 	// send analytics event
