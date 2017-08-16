@@ -45,27 +45,48 @@ Site.is_mobile = function() {
 	return result;
 };
 
-Site.handle_dialog_form = function(event) {
+/**
+ * Handle clicking on button which shows contact form.
+ * @param object event
+ */
+Site.handle_show_dialog_click = function(event) {
 	event.preventDefault();
 	Site.dialog_form.open();
-
 };
 
-Site.handle_form_submit = function(event) {
+/**
+ * Handle clicking on submit button in dialog.
+ * @param object event
+ */
+Site.handle_submit_click = function(event) {
 	event.preventDefault();
 	Caracal.ContactForm.list[0]._form.submit();
+};
+
+/**
+ * Handle successful data submision.
+ * @param object response_data
+ */
+Site.handle_submit_success = function(response_data) {
+	if (!data.error)
+		return;
+
+	// send analytics event
+	window.dataLayer = window.dataLayer || new Object();
+	window.dataLayer.push({'event': 'leadSent'});
 };
 
 /**
  * Function called when document and images have been completely loaded.
  */
 Site.on_load = function() {
-	if (Site.is_mobile()) 
+	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
 
 	// This button replaceses standard submit button in dialog form
-	Site.submit_button = document.querySelector('#submit');
+	Site.submit_button = document.createElement('a');
 	Site.submit_button.innerHTML = language_handler.getText(null, 'submit');
+	Site.submit_button.addEventListener('click', Site.handle_submit_click);
 
 	// dialog which contains form
 	Site.dialog_form = new Caracal.Dialog();
@@ -75,24 +96,16 @@ Site.on_load = function() {
 		.add_control(Site.submit_button)
 		.set_title(language_handler.getText(null, 'form_title'));
 
-	// Open Form in Dialog
+	// open form in dialog
 	Site.show_dialog_button = document.querySelector('a.form');
-	Site.show_dialog_button.addEventListener('click', Site.handle_dialog_form);
+	Site.show_dialog_button.addEventListener('click', Site.handle_show_dialog_click);
 
-	// Handle form submit with new Submit button in dilaog form
-	Site.submit_button.addEventListener('click', Site.handle_form_submit);
-	
-	// Lightbox for partners images 
+	// lightbox for partners images
 	Site.lightbox = new LightBox('section#partners a.image', true, false, true);
 
 	// handle analytics event
-	var dataLayer = window.dataLayer || new Array();
 	for (var i=0, count=Caracal.ContactForm.list.length; i<count; i++)
-		Caracal.ContactForm.list[i].events.connect('submit-success', function(data) {
-			dataLayer.push({'event': 'leadSent'});
-			return true;
-		});
-	
+		Caracal.ContactForm.list[i].events.connect('submit-success', Site.handle_submit_success);
 };
 
 
