@@ -6,9 +6,11 @@
 			<title><cms:text constant="site_title"/></title>
 			<cms:collection include="animation_chain"/>
 			<cms:module name="head_tag" action="print_tag"/>
+			<cms:raw file="parts/gtmhead.txt"/>
 		</head>
 
 		<body>
+			<cms:raw file="parts/gtmbody.txt"/>
 			<!-- Embed site sprite -->
 			<cms:svg file="site_sprite.svg"/>
 

@@ -84,6 +84,14 @@ Site.on_load = function() {
 	
 	// Lightbox for partners images 
 	Site.lightbox = new LightBox('section#partners a.image', true, false, true);
+
+	// handle analytics event
+	var dataLayer = window.dataLayer || new Array();
+	for (var i=0, count=Caracal.ContactForm.list.length; i<count; i++)
+		Caracal.ContactForm.list[i].events.connect('submit-success', function(data) {
+			dataLayer.push({'event': 'leadSent'});
+			return true;
+		});
 	
 };
 
