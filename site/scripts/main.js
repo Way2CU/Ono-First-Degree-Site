@@ -72,7 +72,7 @@ Site.handle_submit_success = function(response_data) {
 		return;
 
 	// send analytics event
-	window.dataLayer = window.dataLayer || new Object();
+	window.dataLayer = window.dataLayer || new Array();
 	window.dataLayer.push({'event': 'leadSent'});
 };
 
