@@ -190,7 +190,6 @@
 					action="show"
 					text_id="contact_form"
 					/>
-				<button type="submit" id="submit"></button>
 			</div>
 		</body>
 	</html>
