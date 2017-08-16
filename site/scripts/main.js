@@ -67,7 +67,7 @@ Site.handle_submit_click = function(event) {
  * Handle successful data submision.
  * @param object response_data
  */
-Site.handle_submit_success = function(response_data) {
+Site.handle_submit_success = function(data) {
 	if (!data.error)
 		return;
 
