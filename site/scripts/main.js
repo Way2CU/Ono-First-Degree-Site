@@ -86,8 +86,7 @@ Site.on_load = function() {
 		Site.mobile_menu = new Caracal.MobileMenu();
 
 	// This button replaceses standard submit button in dialog form
-	Site.submit_button = document.createElement('a');
-	Site.submit_button.innerHTML = language_handler.getText(null, 'submit');
+	Site.submit_button = document.querySelectorAll('form button[type=submit]')[2];
 	Site.submit_button.addEventListener('click', Site.handle_submit_click);
 
 	// dialog which contains form
